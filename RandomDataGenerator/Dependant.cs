@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RandomDataGenerator
 {
-    public class Dependant
+    public class Dependant : Person
     {
-        public Dependant()
+        public Dependant() 
         {
 
         }

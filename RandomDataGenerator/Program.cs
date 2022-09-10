@@ -5,12 +5,12 @@ public class Program
 {
     private static Random random = new Random();
     private static Person person;
-    //private static Phone phone = new Phone();
+    private static Phone phone = new Phone();
     private static List<Person> list = new List<Person>();
     static void Main(String[] args)
     {
-        //Console.WriteLine(phone);
-        
+        /*person = new Person();
+        Console.WriteLine(person.Age());*/
         Menu();
     }
 
@@ -57,7 +57,7 @@ public class Program
                     Console.Clear();
                     foreach(var persons in list)
                     {
-                        Console.WriteLine(persons);
+                        Console.WriteLine(persons + "\n");
                     }
                     MoveOn();
                     break;
@@ -73,9 +73,15 @@ public class Program
                     break;
 
                 case "6":
+                    Console.WriteLine("What seperator would you like to use?: ");
+                    char sep = Convert.ToChar(Console.ReadLine());
+                    Console.WriteLine(phone.Format(sep));
+                    MoveOn();
                     break;
 
                 case "7":
+                    Console.Clear();
+                    Console.WriteLine("Thank you for using Random Data Generator!");
                     menu = false;
                     break;
 

@@ -10,7 +10,7 @@ namespace RandomDataGenerator
     {
         public Dependant() 
         {
-
+            
         }
     }
 }

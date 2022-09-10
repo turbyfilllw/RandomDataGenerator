@@ -8,7 +8,7 @@ namespace RandomDataGenerator
 {
     public class Phone
     {
-        Random random = new Random();
+        private Random random = new Random();
         public string Number { get; init; }
         
         public Phone()

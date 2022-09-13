@@ -4,15 +4,15 @@
 public class Program 
 {
     private static Random random = new Random();
-    private static Person person;
-    private static Phone phone; //= new Phone();
+    private static Person? person;
+    private static Phone? phone;
+    private static SSN ssn;
+    private static Dependant? dependant;
     private static List<Person> list = new List<Person>();
     static void Main(String[] args)
     {
-        /*person = new Person();
-        Console.WriteLine(person.Age());*/
-        /*SSN sSN = new SSN();
-        Console.WriteLine(sSN.ToString());*/
+       // dependant = new Dependant();
+        //Console.WriteLine(dependant.BirthDate);
         Menu();
     }
 
@@ -27,7 +27,6 @@ public class Program
         Console.WriteLine("Welcome to CSCI 2910 Lab 3 by Logan Turbyfill");
         while (menu)
         {
-            
             Console.WriteLine("1.) Create a Person");
             Console.WriteLine("2.) Remove a Person");
             Console.WriteLine("3.) View all Persons");
@@ -50,7 +49,6 @@ public class Program
                             list.Add(person);
                             Console.WriteLine("Person created!");
                         }
-
                         MoveOn();
                         break;
 
@@ -62,7 +60,6 @@ public class Program
                             MoveOn();
                             menu = true;
                         }
-                        
                         int index = random.Next(list.Count);
                         list.RemoveAt(index);
                         Console.WriteLine("A person has been removed.");
@@ -81,8 +78,6 @@ public class Program
                         {
                             Console.WriteLine(persons + "\n");
                         }
-
-
                         MoveOn();
                         break;
 
@@ -94,6 +89,10 @@ public class Program
                         break;
 
                     case "5":
+                        Console.Clear();
+                        ssn = new SSN();
+                        Console.WriteLine(ssn.ToString());
+                        MoveOn();
                         break;
 
                     case "6":

@@ -69,24 +69,19 @@ namespace RandomDataGenerator
             return GetAge;
         }
 
-        public void AddDependant()
-        {
-            
-        }
-
         /// <summary>
         /// overriden toString for clean output
         /// </summary>
         /// <returns>information about the person object</returns>
         public override string ToString()
         {
-            return "First Name: " + FirstName + 
-                "\nLast Name: " + LastName + 
-                "\nPhone: " + Phone + 
-                "\nBirthdate: " + BirthDate + 
-                "\nAge: " + Age() + 
-                "\nSSN: " + SSN.ToString() +
-                "\nDependants " + _dependant;
+            return "First Name: " + FirstName +
+                "\nLast Name: " + LastName +
+                "\nPhone: " + Phone +
+                "\nBirthdate: " + BirthDate +
+                "\nAge: " + Age() +
+                "\nSSN: " + SSN.ToString();
+                
         }
     }
 }

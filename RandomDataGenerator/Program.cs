@@ -11,8 +11,7 @@ public class Program
     private static List<Person> list = new List<Person>();
     static void Main(String[] args)
     {
-       // dependant = new Dependant();
-        //Console.WriteLine(dependant.BirthDate);
+       
         Menu();
     }
 
@@ -60,7 +59,25 @@ public class Program
                             MoveOn();
                             continue;
                         }
-                        int index = random.Next(list.Count);
+                        Console.Write("Enter the index of the person you would like removed: ");
+                        int index = Int32.Parse(Console.ReadLine());
+                        if (index == 1)
+                        {
+                            index = 0;
+                        }
+
+                        if(index == list.Count)
+                        {
+                            index = list.Count - 1;
+                        }
+
+                        if(index > list.Count)
+                        {
+                            Console.WriteLine("There are not that many people in the list...");
+                            MoveOn();
+                            continue;
+                        }
+
                         list.RemoveAt(index);
                         Console.WriteLine("A person has been removed.");
                         MoveOn();
@@ -118,7 +135,7 @@ public class Program
                 }
             } catch(Exception e)
             {
-                Console.WriteLine("Something went wrong... " + e);
+                Console.WriteLine("Something went wrong... \n" + e);
             }
            
         }

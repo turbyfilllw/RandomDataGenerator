@@ -58,7 +58,7 @@ public class Program
                         {
                             Console.WriteLine("You have not created a person.");
                             MoveOn();
-                            menu = true;
+                            continue;
                         }
                         int index = random.Next(list.Count);
                         list.RemoveAt(index);
@@ -107,6 +107,7 @@ public class Program
                     case "7":
                         Console.Clear();
                         Console.WriteLine("Thank you for using Random Data Generator!");
+                        MoveOn();
                         menu = false;
                         break;
 
